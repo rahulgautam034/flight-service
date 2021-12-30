@@ -46,7 +46,8 @@ public class BookingController {
 	public ResponseEntity<BookingDto> bookFlight(@RequestBody BookingDto bookingDto) {
 		log.info("book flight called");
 		Random random = new Random();
-		bookingDto.setPnrNumber(Integer.toString(random.nextInt()));
+		Integer number = Math.abs(random.nextInt());
+		bookingDto.setPnrNumber(Integer.toString(number));
 		BookingDto res = bookingService.bookFlight(bookingDto);
 		return ResponseEntity.status(HttpStatus.OK).body(res);
 

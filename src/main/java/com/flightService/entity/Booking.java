@@ -1,4 +1,6 @@
 package com.flightService.entity;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +34,9 @@ public class Booking {
 
 	private String flightId;
 
-	private String date;
+	private LocalDateTime date;
+	
+	private LocalDate bookingDate;
 	
 	private String startTime;
 

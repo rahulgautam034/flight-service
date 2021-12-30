@@ -1,6 +1,7 @@
 package com.flightService.controller;
 
 import java.util.List;
+import java.util.Random;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
@@ -51,9 +52,10 @@ public class FlightController {
 	public ResponseEntity<FlightDto> addNewFlight(@Validated @RequestBody FlightDto flightDto) {
 		log.info("addNewFlight called");
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-
+		Random random = new Random();
+		Integer number = Math.abs(random.nextInt());
+		flightDto.setFlightId(number.toString());
 		FlightDto res = flightService.addFlight(flightDto);
-
 		return ResponseEntity.status(HttpStatus.CREATED).body(res);
 
 	}

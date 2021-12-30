@@ -59,4 +59,28 @@ public class Flight {
 	private String meal;
 
 	private String status;
+
+	public Flight(String flightId, String airLine, String source, String destination, LocalDate startDate,
+			LocalDate endDate, String startTime, String endTime, String instrumentUsed, Integer businessClassSeats,
+			Integer nonBusinessClassSeats, Double ticketCost, Integer totalRows, Integer totalSeats, String meal,
+			String status) {
+		this.flightId = flightId;
+		this.airLine = airLine;
+		this.source = source;
+		this.destination = destination;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.startTime = startTime;
+		this.endTime = endTime;
+		this.instrumentUsed = instrumentUsed;
+		this.businessClassSeats = businessClassSeats;
+		this.nonBusinessClassSeats = nonBusinessClassSeats;
+		this.ticketCost = ticketCost;
+		this.totalRows = totalRows;
+		this.totalSeats = totalSeats;
+		this.meal = meal;
+		this.status = status;
+	}
+	
+	
 }
