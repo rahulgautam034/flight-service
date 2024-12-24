@@ -2,7 +2,7 @@ package com.flightService.dto;
 
 import java.time.LocalDate;
 
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
